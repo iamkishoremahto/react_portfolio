@@ -1,8 +1,17 @@
 import './Hero.scss'
 import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 const Hero = (props) => {
 
-
+    const [randomAimate,setRandomAnimate] = useState('col-md-8 long_info');
+    
+    const generateRandomAimate = () => {
+        const animationArray = ['animate__fadeInDownBig','animate__fadeInTopLeft','animate__flip','animate__zoomInRight','animate__rotateIn']
+        const randomIndex = Math.floor(Math.random()*animationArray.length);
+        const randomAnimationClass = "col-md-8 animate__animated long_info " + animationArray[randomIndex];
+        setRandomAnimate(randomAnimationClass);
+    };
+  
     
     // const long_info = props;
     return (
@@ -29,7 +38,7 @@ const Hero = (props) => {
                             </p>
                         </div>
                     </div>
-                    <div className="col-md-8 long_info ">
+                    <div className={randomAimate}>
                         {props.long_info}
 
                         
@@ -37,9 +46,9 @@ const Hero = (props) => {
 
                     <div className="navigation">
                         <ul>
-                            <li> <Link className='link'  to="/"><i className="fa-solid fa-house"></i></Link></li>
-                            <li> <Link className='link'  to="/about"><i className="fa-solid fa-user"></i></Link></li>
-                            <li> <Link  className='link' to="/resume"><i className="fa-solid fa-graduation-cap"></i></Link></li>
+                            <li onClick={generateRandomAimate}> <Link className='link'  to="/"><i  className="fa-solid fa-house"></i></Link></li>
+                            <li onClick={generateRandomAimate}> <Link className='link'  to="/about"><i  className="fa-solid fa-user"></i></Link></li>
+                            <li onClick={generateRandomAimate}> <Link  className='link' to="/resume"><i  className="fa-solid fa-graduation-cap"></i></Link></li>
                         </ul>
            
            
