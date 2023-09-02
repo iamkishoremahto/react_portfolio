@@ -1,10 +1,10 @@
 
 
 import './App.scss'
-import Hero from './component/Hero/Hero'
-import Home from './component/Home/Home'
-import About from './component/About/About'
-import Resume from './component/Resume/Resume'
+import Hero from './components/Hero/Hero'
+import Home from './components/Home/Home'
+import About from './components/About/About'
+import Resume from './components/Resume/Resume'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {

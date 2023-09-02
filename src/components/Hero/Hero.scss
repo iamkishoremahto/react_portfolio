@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+   
     min-height: 100%;
  
 
@@ -16,6 +16,7 @@
         border-radius: 35px;
         height: 800px;
         width: 100%;
+        background-color: $gray;
         // overflow: hidden;
         // border: 2px solid blue;
         padding: 0;
@@ -31,25 +32,25 @@
             border-radius: 35px 0px 0px 35px;
 
 
-            &::after{
-                position: absolute;
-                content: '';
-                height: 80px;
-                width: 80px;
-                background-color: $gray;
-                top:0;
-                right: -30px;
-            }
+            // &::after{
+            //     position: absolute;
+            //     content: '';
+            //     height: 80px;
+            //     width: 80px;
+            //     background-color: $gray;
+            //     top:0;
+            //     right: -30px;
+            // }
         
-            &::before{
-                position: absolute;
-                content: '';
-                height: 80px;
-                width: 80px;
-                background-color: $gray;
-                bottom:0;
-                right: -30px;
-            }
+            // &::before{
+            //     position: absolute;
+            //     content: '';
+            //     height: 80px;
+            //     width: 80px;
+            //     background-color: $gray;
+            //     bottom:0;
+            //     right: -30px;
+            // }
            
             .myInfo{
                 display: flex;
@@ -110,7 +111,7 @@
 
 .parrent_wrapper {
     min-height: 100vh;
-    border: 2px solid red;
+    // border: 2px solid red;
     display: flex;
 }
 
@@ -192,7 +193,7 @@
 
 .navigation{
     position:absolute;
-    border: 2px solid red;
+    // border: 2px solid red;
     height: 100%;
     // right: -100px;
     // top: 30%;

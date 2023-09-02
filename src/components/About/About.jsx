@@ -1,13 +1,15 @@
 
 import './About.scss'
-import Work from './Work'
-import workData from './workData'
+import Work from './sub_component/Work'
+import workData from './data/workData'
+import testimonialsData from './data/Testimonials_data';
+import Testimonial from './sub_component/Testimonial';
 const About = () => {
 
     return (
         <>
             <div className="row about">
-                <h1>About <span className='blueFont'>Me</span></h1>
+                <h1>About <span className='blueFont back_shadow'>Me</span></h1>
                 <div className="row about_info">
                     <div className="col-md-6 about_decription">
                         <p>
@@ -26,7 +28,7 @@ const About = () => {
                 </div>
 
                 <div className="row what_i_do">
-                    <h4>What <span className='blueFont'>I Do</span></h4>
+                    <h4 className='back_shadow'>What <span className='blueFont'>I Do</span></h4>
                     <div className="row work_wrapper">
 
 
@@ -41,11 +43,28 @@ const About = () => {
                 </div>
 
                 <div className="row testimonials">
-                <h4>Testimonials</h4>
+                    <h4 className='back_shadow'>Testimonials</h4>
 
-                <div className="row testimonial_wraper">
-                    
-                </div>
+                    <div className="row testimonial_wraper">
+
+                        {/* <div className="testimonial">
+                            <img src="https://lmpixels.com/demo/breezycv/dark/1/img/testimonials/testimonial-1.jpg" alt="" className="img-fluid testimonial_profile" />
+                            <p className="testimonial_content">Vivamus at molestie dui, eu ornare orci. Curabitur vel egestas dolor. Nulla condimentum nunc sit amet urna tempus finibus. Duis mollis leo id ligula pellentesque, at vehicula dui ultrices.</p>
+                            <div className="testimonial_author">
+                                <p className="author_name">Julia Hickman</p>
+                                <p className="company">Omni Source</p>
+                            </div>
+
+                            <i className="fas fa-quote-right"></i>
+                        </div> */}
+
+                        {
+                            testimonialsData.map(data => (
+                                <Testimonial data={data} key={data.id} />
+
+                            ))
+                        }
+                    </div>
                 </div>
 
 
